@@ -1,0 +1,26 @@
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Description</th>
+      <th scope="col">Image</th>
+      <th scope="col">publishedAt</th>
+      <th scope="col">Content</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @info.each do |data| %>
+    <tr>
+      <th scope="row"><%= data["id"] %></th>
+      <th scope="row"><%= data["title"] %></th>
+      <th scope="row"><%= data["author"] %></th>
+      <th scope="row"><%= data["description"] %></th>
+      <th scope="row"><img src=<%= data["urlToImage"] %>  class="img-fluid" alt="Responsive image"></th>
+      <th scope="row"><%= data["publishedAt"] %></th>
+      <th scope="row"><%= data["content"] %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
